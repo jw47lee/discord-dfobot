@@ -5,32 +5,8 @@ module.exports = {
     execute(client, message, args, Discord){
 
         const amp_num = parseInt(args[0]);
-        //console.log(amp_num);
+
         const amp_rate = Math.random();
-        //console.log(amp_rate);
-
-
-        /*
-        결과는 
-        Reinforcement Successful 12 → 13
-        Reinforcement Failed :boom: 
-
-        이런느낌?
-        11에서 트라이할땐
-        Reinforcement Failed 11 → 8
-        */
-       /*
-       
-       -rein 레꼬3 하면
-
-0강부터 시작하고 
-
-성공시 [+8 레꼬3]
-실패시 [+7 레꼬3]
-
-이런식으로 템터질때까지 그냥 텍스트로만 해도 자동으로 몇강인지 알고 결과나오는식으로
-       */
-
         
         const trial_msg = "trying amplification " + (amp_num-1) + " -> " + amp_num + "\n"
         const suc_msg = trial_msg + "success! " + (amp_num-1) + " -> " + amp_num

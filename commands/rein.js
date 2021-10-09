@@ -69,7 +69,6 @@ module.exports = {
             const user_inven = rein_data + '.' + message.author.id;
             const item_name = user_inven + '.' + args[0];
            
-
             //db.delete(rein_data); // reset rein_data
             if(!db.has(rein_data)){
                 db.set(rein_data, {total_items: 0});
