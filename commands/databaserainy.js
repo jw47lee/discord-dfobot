@@ -9,7 +9,5 @@ module.exports = {
             console.log(element);
         });
 
-
-
     }
 }

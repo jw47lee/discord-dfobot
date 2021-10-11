@@ -88,7 +88,6 @@ module.exports = {
         // delete
         else if(args[0] == "삭제" || args[0] == "delete" || args[0] == "remove" ){
             if(!message.member.permissions.has("MANAGE_GUILD")){
-                message.reply("not here");
                 return message.reply("you don't have a permission to delete fmage meme! Only Manage Guild permission owner is allowed to run this command!");
             }
             if(db.get(meme_lst).length == 0){

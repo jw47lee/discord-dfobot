@@ -6,7 +6,15 @@ module.exports = (Discord, client, message) => {
     const prefix = '-';
     console.log("[" + message.guild.name + "]" + " #" + message.channel.name + " " + message.content);
 
+
+    //if banned => end program;
+    const ban_sys = client.commands.get('ban');
+    const is_ban = ban_sys.check_banned(client, message, Discord);
+    if(is_ban) return;
+
     // meme gen
+
+
     if(message.content.startsWith('응애 나')){
         message.channel.send('오구오구');
     }
@@ -26,13 +34,13 @@ module.exports = (Discord, client, message) => {
         message.channel.send('https://cdn.discordapp.com/attachments/312701794360885258/894067557043167232/K-002.jpg');
     }
 
-
-    
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
     const command = client.commands.get(cmd);
+
+
     try{
 
         if(!cooldowns.has(command.name)){
