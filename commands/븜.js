@@ -33,9 +33,6 @@ module.exports = {
             if(db.get(meme_lst).length == 0){
                 return message.reply("fmage meme is empty! please add then try again!");
             }
-            
-            
-
                 if(message.author.id != test_id){
                     //return;
                 }
@@ -70,7 +67,7 @@ module.exports = {
                 });
                 */
                 //message.channel.send(first);
-/*
+                /*
                 const pages = [first, second];
             
                 pagination({

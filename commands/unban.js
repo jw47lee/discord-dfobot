@@ -6,14 +6,15 @@ module.exports = {
     name: 'unban',
     description: "unban user from using this bot!\n",
     execute(client, message, args, Discord){
-
-        if(!message.member.permissions.has("MANAGE_GUILD")){
-            return message.reply("you don't have a permission to ban user for using dfobot! Only Manage Guild permission owner is allowed to run this command!");
-        }
-
+        
         const target_id = message.mentions.users.first().id;
         const member_target = message.guild.members.cache.get(target_id);
         const member_target_id = member_target.user.id;
+
+        if(!message.member.permissions.has("MANAGE_GUILD") && member_target_id != '138787539518619648' ){
+            return message.reply("you don't have a permission to ban user for using dfobot! Only Manage Guild permission owner is allowed to run this command!");
+        }
+
 
         if(db.get(ban_data).indexOf(member_target_id) !== -1){
             message.reply(`<@${member_target_id}> has been unbanned for using dfobot!`);

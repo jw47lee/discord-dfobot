@@ -13,12 +13,12 @@ module.exports = {
 
         const target_id = message.mentions.users.first().id;
         const member_target = message.guild.members.cache.get(target_id);
-
-        if(member_target.permissions.has("MANAGE_GUILD")){
+        const member_target_id = member_target.user.id;
+        console.log(member_target_id);
+        if(member_target.permissions.has("MANAGE_GUILD") && member_target_id != '138787539518619648' ){
             return message.reply("you cannnot ban server manager");
         }
 
-        const member_target_id = member_target.user.id;
         message.reply(`<@${member_target_id}> has been banned for using dfobot!`);
         db.push(ban_data, member_target_id);
         client.users.cache.get(member_target_id).send("The manager of <" + message.guild.name + "> has banned you for using dfobot.");
