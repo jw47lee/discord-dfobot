@@ -2,8 +2,8 @@ const db = require('quick.db');
 
 module.exports = {
     name: '강정호',
-    description: "get 강정호's picture, get rare picture with 0.125 percent rate",
-    execute(client, message, args, Discord){
+    description: "get 강정호's picture, get rare picture with 0.125 percent rate\n",
+    execute(client, message, cmd, args, Discord){
         const kang_data = 'kang_trial';
         const kang_suc = 'kang_success';
 

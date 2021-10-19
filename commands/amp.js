@@ -2,7 +2,7 @@
 module.exports = {
     name: 'amp',
     description: "simulate amplication to +n, test your luck! Ex) -amp 12\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
 
         const amp_num = parseInt(args[0]);
 

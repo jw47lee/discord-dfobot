@@ -10,7 +10,7 @@ commandFiles.forEach(function(file){
 module.exports = {
     name: 'help',
     description: "this is a help command!\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         var help_msg = this.description;
         //console.log(command_map.get('rc').description);
         command_map.forEach((value, key) => {

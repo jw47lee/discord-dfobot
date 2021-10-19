@@ -5,7 +5,7 @@ const ban_data = 'ban_data.banned_user';
 module.exports = {
     name: 'ban',
     description: "ban user from using this bot!\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
 
         if(!message.member.permissions.has("MANAGE_GUILD")){
             return message.reply("you don't have a permission to ban user for using dfobot! Only Manage Guild permission owner is allowed to run this command!");

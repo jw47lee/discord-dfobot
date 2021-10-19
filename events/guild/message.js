@@ -64,7 +64,7 @@ module.exports = (Discord, client, message) => {
         time_stamps.set(message.author.id, current_time);
     
     
-        if(command) command.execute(client, message, args, Discord);
+        if(command) command.execute(client, message, cmd, args, Discord);
 
     }catch(err){
         console.log(err);

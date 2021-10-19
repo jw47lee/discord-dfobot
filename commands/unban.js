@@ -5,7 +5,7 @@ const ban_data = 'ban_data.banned_user';
 module.exports = {
     name: 'unban',
     description: "unban user from using this bot!\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         
         const target_id = message.mentions.users.first().id;
         const member_target = message.guild.members.cache.get(target_id);

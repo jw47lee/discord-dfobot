@@ -1,7 +1,7 @@
 module.exports = {
     name: 'rc',
     description: "get random channel for GOW. If you add your character list, you can get random order of your chars\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         if(args.length == 0){
             const last_ch = 46;
             const first_ch = 10;

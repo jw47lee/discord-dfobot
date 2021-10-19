@@ -3,7 +3,7 @@ module.exports = {
     name: 'rein',
     cooldown: 3,
     description: "simulate reinforcement to +n, test your luck! Ex) -rein 12\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         const rein_data = 'rein_data';
         const test_id = 259825165272088576;
         if(message.author.id != test_id){
@@ -38,6 +38,7 @@ module.exports = {
             const item_id = rein_data + '.' + message.author.id + '.' + item_name;
             if(db.has(item_id)){
                 db.delete(item_id);
+                message.reply(item_name + " deleted!");
             }
             else{
                 message.reply("no such item called " + item_name);

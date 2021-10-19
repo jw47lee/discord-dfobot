@@ -5,7 +5,7 @@ const paginationEmbed = require('discordjs-button-pagination')
 module.exports = {
     name: 'ping',
     description: "get 'pong' message back, will be used for testing your ping. not implemented yet\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         const test_id = 259825165272088576;
         if(message.author.id != test_id){
             //return message.reply("not implemented! stay tuned");

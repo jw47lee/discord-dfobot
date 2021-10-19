@@ -4,7 +4,7 @@ module.exports = {
     name: '슬롯',
     description: "live or die",
     cooldown: 3,
-    async execute(client, message, args, Discord){
+    async execute(client, message, cmd, args, Discord){
         const suc_rate = 0.125;
         //db.set('slot_data', {total_trial: 0, winner: [], })
         if(!db.has('slot_data')){

@@ -1,7 +1,7 @@
 module.exports = {
     name: 'mythic',
     description: "simulate mythic drop, get how many runs of GOW it takes and what mythic will get\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd,  args, Discord){
         var counter = 0;
         var is_dropped = false;
         while(!is_dropped){

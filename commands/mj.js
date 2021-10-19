@@ -2,8 +2,8 @@ const db = require('quick.db');
 
 module.exports = {
     name: 'mj',
-    description: "mj",
-    execute(client, message, args, Discord){
+    description: "random mj's picture\n",
+    execute(client, message, cmd, args, Discord){
 
         const mj_data = 'mj_trial';
 

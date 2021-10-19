@@ -2,7 +2,7 @@ module.exports = {
     name: 'balance',
     aliases: ['bal'],
     description: "simulate balance patch for fun\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
 
         if(args[0]){
             var percentage = random_percentage(21) - 55;

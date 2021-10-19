@@ -1,7 +1,7 @@
 module.exports = {
     name: 'buff',
     description: "calculate your buff with two arguments, stat buff and PMI buff\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         if(args.length != 2){
             message.channel.send('please provide only 2 arguements, buff stat and PMI stat')
         }

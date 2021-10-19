@@ -1,7 +1,7 @@
 module.exports = {
     name: 'sora',
     description: "Ask magic conch anything!\n",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd, args, Discord){
         const prob = Math.random();
         const msg = random_sora(prob);
         message.reply(msg);

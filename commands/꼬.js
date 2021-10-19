@@ -1,7 +1,7 @@
 module.exports = {
     name: '꼬',
     description: "꼬추 길이..",
-    execute(client, message, args, Discord){
+    execute(client, message, cmd,  args, Discord){
         message.reply(args[0][0] + "꼬" + random_length(Math.random()))
     }
 }

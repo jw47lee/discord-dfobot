@@ -12,8 +12,8 @@ const meme_uploader = fmage_data + '.meme_uploader';
 
 module.exports = {
     name: '븜',
-    description: "generate random fmage meme",
-    execute(client, message, args, Discord){
+    description: "generate random fmage meme\n",
+    execute(client, message, cmd, args, Discord){
 
         const test_id = 259825165272088576;
         if(message.author.id != test_id){

@@ -2,8 +2,8 @@ const db = require('quick.db');
 
 module.exports = {
     name: '띵진',
-    description: "희망편 or 절망편",
-    execute(client, message, args, Discord){
+    description: "희망편 or 절망편\n",
+    execute(client, message, cmd,  args, Discord){
         message.reply(random_dding());   
     }
 }
