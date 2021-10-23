@@ -36,7 +36,6 @@ module.exports = {
                 if(message.author.id != test_id){
                     //return;
                 }
-                //message.reply("시발")
                 const pages = get_list();
 
                 const button1 = new MessageButton()
@@ -78,8 +77,6 @@ module.exports = {
 
                 });
                 */
-
-            
 
         }
         // delete
